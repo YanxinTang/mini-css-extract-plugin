@@ -801,6 +801,7 @@ class MiniCssExtractPlugin {
                     Template.indent([
                       '// avoid mem leaks.',
                       'linkTag.onerror = linkTag.onload = null;',
+                      'event = event || window.event;',
                       "if (event.type === 'load') {",
                       Template.indent(['resolve();']),
                       '} else {',
